@@ -1,19 +1,105 @@
 
 .main{
     display: grid;
-    grid-template-columns: repeat(5, 2fr);
+    grid-template-columns: repeat(6, 2fr);
     grid-template-rows: repeat(4,200px);
-    gap: 5px;
     margin: 5%;
     box-sizing: border-box;
     align-items: stretch;
     justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: black;
 }
 .box{
-    font-size: 4em;
+    font-size: 1000%;
     text-align: center;
     padding: 5%;
-    background-color: yellow;
     align-self: stretch;
-    border-radius: 10px;
+    background-color: #ff9800;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.box:nth-child(even):hover{
+    transform: rotateX(360deg);
+    transition: 0.5s;
+}
+.box:nth-child(odd):hover{
+    transform: rotateY(360deg);
+    transition: 0.5s;
+}
+
+div.footer {
+    background: antiquewhite;
+    font-family: monospace;
+    text-align: center;
+    font-size: 1rem;
+}
+@media only screen and (max-width: 500px) {
+    .box {
+        font-size: 445%;
+        text-align: center;
+        padding: 5%;
+        align-self: stretch;
+        background-color: #ff9800;
+        color: white;
+        font-family: 'Circular-Loom';
+        display: flex;
+        align-items: center;
+        border-radius: 0;
+    }
+    .main {
+        margin: 0;
+        gap:0;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4,25vh);
+        box-sizing: border-box;
+        align-items: stretch;
+        justify-content: center;
+        max-height: 98vh;
+        overflow: hidden;
+    }
+    div.footer {
+    background: antiquewhite;
+    font-family: monospace;
+    text-align: center;
+    font-size: 1rem;
+}
+}
+@media only screen and (max-width: 765px) {
+    .box {
+        font-size: 445%;
+        text-align: center;
+        padding: 5%;
+        align-self: stretch;
+        background-color: #ff9800;
+        color: white;
+        font-family: 'Circular-Loom';
+        display: flex;
+        align-items: center;
+        border-radius: 0;
+    }
+    .main {
+        border-radius: 0;
+        margin: 0;
+        gap:0;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4,25vh);
+        box-sizing: border-box;
+        align-items: stretch;
+        justify-content: center;
+        max-height: 98vh;
+        overflow: hidden;
+    }
+    div.footer {
+    background: antiquewhite;
+    font-family: monospace;
+    text-align: center;
+    font-size: 1rem;
+}
 }
